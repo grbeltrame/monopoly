@@ -14,7 +14,12 @@ const Home = () => {
     socket.on('connect', () => {
       console.log("Conectado!");
     });
-  });
+
+    // Limpar a conexão do socket quando o componente é desmontado
+    return () => {
+      socket.off('connect');
+    };
+  }, []);
 
   return (
     <div className="container">
@@ -24,8 +29,8 @@ const Home = () => {
         <input placeholder="Enter your username" className="input" name="text" type="text" />
         <p className="input__description">What do you want to call yourself?</p>
       </div>
-      <button className="learn-more" onClick={() => navigate.push('/chose-players')}>JOGAR EM GRUPO</button>
-      <button className="learn-more" onClick={() => navigate.push('/chose-players')}>CONTRA IA</button>
+      <button className="learn-more" onClick={() => navigate('/chose-players')}>JOGAR EM GRUPO</button>
+      <button className="learn-more" onClick={() => navigate('/chose-players')}>CONTRA IA</button>
     </div>
   );
 };

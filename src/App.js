@@ -11,9 +11,9 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" exact component={Home} />
-          <Route path="/chose-players" component={ChosePlayers} />
-          <Route path="/game-board" component={GameBoard} />
+          <Route path="/" element={<Home />} />
+          <Route path="/chose-players" element={<ChosePlayers />} />
+          <Route path="/game-board" element={<GameBoard />} />
         </Routes>
       </div>
     </Router>
