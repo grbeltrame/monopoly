@@ -11,12 +11,12 @@ const ChosePlayers = () => {
       <h2>QUANTOS JOGADORES?</h2>
       <div className="qtd">
         {[1, 2, 3, 4].map((num) => (
-          <div key={num} className="plusButton" onClick={() => navigate.push('/game-board')}>
+          <div key={num} className="plusButton" onClick={() => navigate('/game-board')}>
             {num}
           </div>
         ))}
       </div>
-      <button className="learn-more" onClick={() => navigate.push('/game-board')}>JOGAR</button>
+      <button className="learn-more" onClick={() => navigate('/game-board')}>JOGAR</button>
     </div>
   );
 };
