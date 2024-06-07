@@ -1,8 +1,8 @@
 import React from 'react';
-import Property from './Property';
-import Service from './Service';
-import Station from './Station';
-import Card from './Card';
+import Property from './property';
+import Service from './service';
+import Station from './station';
+import Card from './card';
 
 const Board = () => {
   return (

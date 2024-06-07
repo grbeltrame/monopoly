@@ -1,10 +1,10 @@
 // src/pages/Home.js
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Home.css'; // Import your CSS file
 
 const Home = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   return (
     <div className="container">
@@ -14,8 +14,8 @@ const Home = () => {
         <input placeholder="Enter your username" className="input" name="text" type="text" />
         <p className="input__description">What do you want to call yourself?</p>
       </div>
-      <button className="learn-more" onClick={() => history.push('/chose-players')}>JOGAR EM GRUPO</button>
-      <button className="learn-more" onClick={() => history.push('/chose-players')}>CONTRA IA</button>
+      <button className="learn-more" onClick={() => navigate.push('/chose-players')}>JOGAR EM GRUPO</button>
+      <button className="learn-more" onClick={() => navigate.push('/chose-players')}>CONTRA IA</button>
     </div>
   );
 };
