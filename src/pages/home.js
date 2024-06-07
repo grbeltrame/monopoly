@@ -1,10 +1,20 @@
 // src/pages/Home.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css'; // Import your CSS file
+import socketClient from 'socket.io-client';
+
+const socket = socketClient('http://localhost:4000');
 
 const Home = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Registrar um evento de connect
+    socket.on('connect', () => {
+      console.log("Conectado!");
+    });
+  });
 
   return (
     <div className="container">
