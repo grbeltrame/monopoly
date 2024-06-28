@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import Board from '../components/board';
 import Player from '../components/player';
 
-import './GameBoard.css'; // Import your CSS file
-
 const GameBoard = () => {
   const [players, setPlayers] = useState([
     { name: 'Jogador 1', money: 1000, properties: 0, services: 0, cards: 0, stations: 0 },

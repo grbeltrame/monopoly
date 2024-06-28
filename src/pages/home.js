@@ -1,7 +1,6 @@
 // src/pages/Home.js
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Home.css'; // Import your CSS file
 import socketClient from 'socket.io-client';
 
 const socket = socketClient('http://localhost:4000');
@@ -31,6 +30,7 @@ const Home = () => {
       </div>
       <button className="learn-more" onClick={() => navigate('/chose-players')}>JOGAR EM GRUPO</button>
       <button className="learn-more" onClick={() => navigate('/chose-players')}>CONTRA IA</button>
+      <button className="learn-more" onClick={() => navigate('/board')}>BOARD</button>
     </div>
   );
 };

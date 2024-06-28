@@ -1,7 +1,6 @@
 // src/pages/ChosePlayers.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './ChosePlayers.css'; // Import your CSS file
 
 const ChosePlayers = () => {
   const navigate = useNavigate();
